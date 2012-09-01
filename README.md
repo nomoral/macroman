@@ -2,9 +2,8 @@
 macroman
 ========
 
-There are many HTML5 build tools out there.
-But probally none that supports all templating engines you want to use.
-In macroman to add for example support for CoffeeScript you need nothing more than the following line in your config.macroman.
+There are many HTML5 build tools out there. But probably none that supports all templating engines you want to use. 
+To add support for CoffeeScript in macroman you need nothing more than the following line in your `config.macroman`
 
 	:: coffee -c {file}
 
@@ -30,11 +29,7 @@ Another example:
 
 Files are compiled on the fly by the development server.
 
-Please note that I did macroman as a tool for another personal project and it still needs work before you can use it without expaning the code.
-
-
-
-
+Please note that I did macroman as a tool for another personal project and it still needs work before you can use it without expanding the code.
 
 
 
