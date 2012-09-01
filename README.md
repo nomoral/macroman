@@ -7,7 +7,7 @@ To add support for CoffeeScript in macroman you need nothing more than the follo
 
 	:: coffee -c {file}
 
-And this is how we tell macroman to "compile" all .coffee files to .js with CoffeeScript
+And this is how we tell macroman to "compile" all `.coffee` files to `.js` with CoffeeScript
 
 	*.coffee -> coffee => *.js
 
