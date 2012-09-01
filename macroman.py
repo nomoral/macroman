@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 
-# macroman, a build tool for HTML5 app
+# macroman, a build tool for HTML5 apps
 #   Copyright (C) 2012  Irae Hueck Costa
 #   This program is free software; you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
