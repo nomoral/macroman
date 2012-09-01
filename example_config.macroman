@@ -1,0 +1,44 @@
+
+
+
+/index.html => /
+
+
+/js/init.coffee -> coffee => {base}.js
+/js/lib/finch.coffee -> coffee => {base}.js
+
+/js/app/requireAllTemplates.coffee.py -> python -> bcoffee -> commonjs => requireAllTemplates.js
+#/css/all.styl.py -> python -> stylus => all.css
+
+*.coffee -> bcoffee -> commonjs => *.js
+
+*.hbs -> handlebars => *.js
+*.styl -> stylus => *.css
+        
+*.coffee.py -> python -> coffee  => *.js
+
+
+:: handlebars {file} -f {pwd}/out
+:: stylus --out {tmpdir} --use /usr/local/lib/node_modules/nib/lib/nib.js {file}
+stylus.copy :: no
+stylus.outfile :: {tmpdir}/{filebase}.css
+
+bcoffee ::  coffee --contracts --bare --compile {file}
+
+:: coffee --compile {file}
+
+commonjs :: {bin}/to_commonjs.py {file}
+
+cdebug :: {bin}/cdebug.py {file}
+cdebug.outfile :: /tmp/{pid}.out
+cdebug.copy :: no
+
+
+
+:: python {file}
+python.outfile :: /tmp/{pid}.out
+python.copy :: no
+
+
+
+
